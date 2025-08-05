@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Обзор компании - StableReviews</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- External Libraries -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header"></header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <nav>
+          <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li class="separator"><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Инвестиционные компании</a></li>
+            <li class="separator"><i class="fas fa-chevron-right"></i></li>
+            <li><a href="#">Брокеры</a></li>
+            <li class="separator"><i class="fas fa-chevron-right"></i></li>
+            <li>Название компании</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="review">
+      <div class="container">
+        <!-- Company Header -->
+        <div class="company-header">
+          <div class="company-info">
+            <div class="company-logo">LOGO</div>
+            <div class="company-details">
+              <h1>Название компании</h1>
+              <div class="company-url">website.com</div>
+              <div class="rating">
+                <div class="stars">
+                  <i class="fas fa-star star"></i>
+                  <i class="fas fa-star star"></i>
+                  <i class="fas fa-star star"></i>
+                  <i class="fas fa-star star inactive"></i>
+                  <i class="fas fa-star star inactive"></i>
+                </div>
+                <span>3.0 из 5</span>
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block btn-main">
+              <i class="fas fa-search mr-2"></i>
+              Проверить компанию
+            </button>
+          </div>
+        </div>
+
+        <div class="content-grid">
+          <!-- Main Content -->
+          <div class="main-column">
+            <!-- Quick Summary -->
+            <div class="alert-card alert-warning">
+              <h2>
+                <i
+                  class="fas fa-exclamation-triangle"
+                  style="color: #f56565"
+                ></i>
+                Краткое резюме
+              </h2>
+              <p>
+                Краткое описание компании и основные выводы обзора будут
+                отображаться здесь. Этот текст поступает из админки одним
+                блоком.
+              </p>
+            </div>
+
+            <!-- Main Content from Admin -->
+            <div class="content-card">
+              <div class="content-text">
+                <h2>
+                  <i class="fas fa-info-circle" style="color: #4299e1"></i>
+                  Основные сведения
+                </h2>
+                <table class="info-table">
+                  <tr>
+                    <th>
+                      <i class="fas fa-phone" style="color: #4299e1"></i>
+                      Телефон
+                    </th>
+                    <td>+1 234 567 8900</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="fas fa-globe" style="color: #48bb78"></i> Страна
+                    </th>
+                    <td>Кипр</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i
+                        class="fas fa-map-marker-alt"
+                        style="color: #f56565"
+                      ></i>
+                      Адрес
+                    </th>
+                    <td>Адрес компании</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="fas fa-envelope" style="color: #667eea"></i>
+                      Email
+                    </th>
+                    <td>info@company.com</td>
+                  </tr>
+                  <tr>
+                    <th>
+                      <i class="fas fa-shield-alt" style="color: #4299e1"></i>
+                      Регулятор
+                    </th>
+                    <td>CySEC</td>
+                  </tr>
+                </table>
+                <p>
+                  Это место для основного контента из админки. Здесь может быть
+                  любой HTML-контент, который администратор вводит через
+                  визуальный редактор:
+                </p>
+
+                <h2>Заголовок раздела</h2>
+                <p>
+                  Текст раздела с возможностью использования
+                  <strong>жирного текста</strong>, <em>курсива</em>,
+                  <a href="#">ссылок</a> и других элементов форматирования.
+                </p>
+
+                <ul>
+                  <li>Пункт списка 1</li>
+                  <li>Пункт списка 2</li>
+                  <li>Пункт списка 3</li>
+                </ul>
+
+                <blockquote>
+                  Цитата или важное замечание может быть оформлено таким
+                  образом.
+                </blockquote>
+
+                <h3>Тревожные сигналы</h3>
+                <p>Описание проблемных моментов и рисков.</p>
+
+                <h3>Положительные стороны</h3>
+                <p>Описание преимуществ и сильных сторон компании.</p>
+
+                <h2>Итоговый вердикт</h2>
+                <p>Заключительные выводы и рекомендации по компании.</p>
+              </div>
+            </div>
+
+            <!-- Reviews Section -->
+            <div class="content-card">
+              <h2>
+                <i class="fas fa-comments"></i>
+                Отзывы клиентов
+              </h2>
+              <div class="comment-card">
+                <div class="comment-content-wrap">
+                  <div class="comment-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="comment-content-row">
+                    <div class="comment-content">
+                      <p>Имя пользователя</p>
+                      <div class="flex">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star inactive"></i>
+                        <i class="fas fa-star star inactive"></i>
+                        <i class="fas fa-star star inactive"></i>
+                      </div>
+                    </div>
+                    <p>Текст отзыва</p>
+                  </div>
+                </div>
+                <div class="comment-content-wrap">
+                  <div class="comment-avatar">
+                    <i class="fas fa-user"></i>
+                  </div>
+                  <div class="comment-content-row">
+                    <div class="comment-content">
+                      <p>Имя пользователя</p>
+                      <div class="flex">
+                        <i class="fas fa-star star"></i>
+                        <i class="fas fa-star star inactive"></i>
+                        <i class="fas fa-star star inactive"></i>
+                        <i class="fas fa-star star inactive"></i>
+                        <i class="fas fa-star star inactive"></i>
+                      </div>
+                    </div>
+                    <p>Текст отзыва</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <!-- Quick Actions -->
+            <div class="sidebar-card">
+              <h3>Быстрые действия</h3>
+              <div class="quick-actions">
+                <button class="btn btn-danger btn-block">
+                  <i class="fas fa-exclamation-triangle"></i>
+                  Сообщить о проблеме
+                </button>
+                <button class="btn btn-primary btn-block">
+                  <i class="fas fa-question-circle"></i>
+                  Получить консультацию
+                </button>
+                <button class="btn btn-success btn-block">
+                  <i class="fas fa-undo"></i>
+                  Возврат средств
+                </button>
+              </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="sidebar-card">
+              <h3>Нужна помощь?</h3>
+              <form>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="form-group">
+                  <textarea
+                    class="form-control"
+                    rows="4"
+                    placeholder="Опишите вашу проблему"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  <i class="fas fa-paper-plane"></i>
+                  Отправить
+                </button>
+              </form>
+            </div>
+
+            <!-- Related Companies -->
+            <div class="sidebar-card">
+              <h3>Похожие компании</h3>
+              <div class="related-company">
+                <div
+                  class="related-icon"
+                  style="background: #e6f3ff; color: #4299e1"
+                >
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="related-info">
+                  <h4>Компания 1</h4>
+                  <p>4.2/5 рейтинг</p>
+                </div>
+              </div>
+              <div class="related-company">
+                <div
+                  class="related-icon"
+                  style="background: #e6ffed; color: #48bb78"
+                >
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="related-info">
+                  <h4>Компания 2</h4>
+                  <p>4.5/5 рейтинг</p>
+                </div>
+              </div>
+              <div class="related-company">
+                <div
+                  class="related-icon"
+                  style="background: #ffe6e6; color: #f56565"
+                >
+                  <i class="fas fa-building"></i>
+                </div>
+                <div class="related-info">
+                  <h4>Компания 3</h4>
+                  <p>3.8/5 рейтинг</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social Share -->
+            <div class="sidebar-card">
+              <h3>Поделиться обзором</h3>
+              <div class="social-share">
+                <button class="social-btn social-facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </button>
+                <button class="social-btn social-twitter">
+                  <i class="fab fa-twitter"></i>
+                </button>
+                <button class="social-btn social-linkedin">
+                  <i class="fab fa-linkedin-in"></i>
+                </button>
+                <button class="social-btn social-whatsapp">
+                  <i class="fab fa-whatsapp"></i>
+                </button>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Floating Action Button -->
+    <div class="floating-action">
+      <button class="floating-btn" title="Экстренная помощь">
+        <i class="fas fa-phone"></i>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+  </body>
+</html>

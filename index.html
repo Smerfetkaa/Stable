@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>StableReviews - Проверка компаний на мошенничество</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- External Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header"></header>
+
+    <!-- Main Header Section -->
+    <div class="header-main">
+      <div class="container">
+        <div class="header-content-main">
+          <h1>Проверьте компанию на мошенничество</h1>
+          <p>
+            Узнайте всю правду о брокере или инвестиционном проекте, прежде чем
+            вносить деньги на депозит.
+          </p>
+          <form class="check-form">
+            <input
+              type="text"
+              placeholder="Введите название компании или сайт"
+              required
+            />
+            <button type="submit">
+              <i class="fas fa-search"></i> Проверить
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="container-counter">
+      <div class="counter">
+        <div class="animate-counter">
+          <div class="stats-counter" data-target="15420">15&nbsp;420</div>
+          <p class="counter-text">Проверенных компаний</p>
+        </div>
+        <div class="animate-counter">
+          <div class="stats-counter" data-target="89340">89&nbsp;340</div>
+          <p class="counter-text">Отзывов пользователей</p>
+        </div>
+        <div class="animate-counter">
+          <div class="stats-counter" data-target="2340">2&nbsp;340</div>
+          <p class="counter-text">Выявлено мошенников</p>
+        </div>
+        <div class="animate-counter">
+          <div class="stats-counter" data-target="4567">4&nbsp;567</div>
+          <p class="counter-text">Спасенных инвесторов</p>
+        </div>
+      </div>
+    </div>
+    <!-- Main Content -->
+    <main class="container">
+      <div class="main-content">
+        <div class="main-column">
+          <!-- Latest Reviews Section -->
+          <section class="content-section">
+            <h2 class="section-title">Последние отзывы</h2>
+            <div class="reviews-grid">
+              <article class="review-card">
+                <div class="review-content">
+                  <div class="review-text-block">
+                    <div class="review-logo-container">
+                      <a
+                        href="https://example.com/alliance"
+                        class="review-logo-link"
+                      >
+                        <img
+                          src="https://www.rsainsurance.co.uk/static/7107093a03c040dfa1c49a47d275b8ae/rsa-intact-logo.svg"
+                          alt="Alliance"
+                          class="review-logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="review-company">Alliance платформа</div>
+                    <p class="review-text">
+                      Это мошенники! Все высасывают, до копейки, одни аферисты
+                      там сидят, даже канал у них, который состоит из ботов, все
+                      выкладывают проверка тест обрезка текста
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="review-content">
+                  <div class="review-text-block">
+                    <div class="review-logo-container">
+                      <a
+                        href="https://example.com/alliance"
+                        class="review-logo-link"
+                      >
+                        <img
+                          src="https://vsyapravda.net/themes/vsyapravda/assets/build/img/main/logo.svg"
+                          alt="Alliance"
+                          class="review-logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="review-company">Неизвестная компания</div>
+                    <p class="review-text">
+                      потерял 6 500 баксов. часть денег депозиты, часть оплата
+                      страховки на вывод… развод чистой воды. заработать не дали
+                    </p>
+                  </div>
+                </div>
+              </article>
+              <article class="review-card">
+                <div class="review-content">
+                  <div class="review-text-block">
+                    <div class="review-logo-container">
+                      <a
+                        href="https://example.com/alliance"
+                        class="review-logo-link"
+                      >
+                        <img
+                          src="https://broker-alliance.ru/wp-content/uploads/2024/11/logo.svg"
+                          alt="Alliance"
+                          class="review-logo"
+                        />
+                      </a>
+                    </div>
+                    <div class="review-company">Название</div>
+                    <p class="review-text">
+                      потерял 6 500 баксов. часть денег депозиты, часть оплата
+                      страховки на вывод… развод чистой воды. заработать не дали
+                    </p>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- Categories Section -->
+          <section class="content-section">
+            <h2 class="section-title">Категории компаний</h2>
+            <div class="categories-grid">
+              <div class="category-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Брокеры</h3>
+
+                <div class="count">2,847 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fab fa-bitcoin"></i>
+
+                <h3>Криптобиржи</h3>
+                <div class="count">456 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fas fa-coins"></i>
+                <h3>Инвестпроекты</h3>
+
+                <div class="count">1,234 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Обменники</h3>
+
+                <div class="count">789 компаний</div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Latest Companies Section -->
+          <section class="content-section">
+            <h2 class="section-title">Последние добавленные компании</h2>
+            <div class="companies-grid">
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">XM</div>
+                  <div class="company-info">
+                    <h4>XM Group</h4>
+                    <div class="domain">xm.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="rating-text">4.5 из 5</span>
+                </div>
+              </article>
+
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">PU</div>
+                  <div class="company-info">
+                    <h4>PU Prime</h4>
+                    <div class="domain">puprime.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">3.0 из 5</span>
+                </div>
+              </article>
+
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">EX</div>
+                  <div class="company-info">
+                    <h4>Exness</h4>
+                    <div class="domain">exness.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                  </div>
+                  <span class="rating-text">4.8 из 5</span>
+                </div>
+              </article>
+
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">AL</div>
+                  <div class="company-info">
+                    <h4>Alliance</h4>
+                    <div class="domain">alliance-platform.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">1.2 из 5</span>
+                </div>
+              </article>
+
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">BN</div>
+                  <div class="company-info">
+                    <h4>Binance</h4>
+                    <div class="domain">binance.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="rating-text">4.3 из 5</span>
+                </div>
+              </article>
+
+              <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">FX</div>
+                  <div class="company-info">
+                    <h4>FXOpen</h4>
+                    <div class="domain">fxopen.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                  <span class="rating-text">3.8 из 5</span>
+                </div>
+              </article>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+          <div class="sidebar-card quick-check">
+            <h3>Быстрая проверка</h3>
+            <p>Проверка займет не более 30 секунд</p>
+            <button><i class="fas fa-search"></i> Проверить сейчас</button>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Самые обсуждаемые</h3>
+            <div class="discussed-item">
+              <div class="discussed-info">
+                <h4>
+                  <a href="single_review.html">WorldwideTrade</a>
+                </h4>
+                <div class="reviews-count">156 отзывов</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-card alert-box">
+            <div class="alert-icon">
+              <i class="fas fa-exclamation-triangle"></i>
+              <h4>Важно знать!</h4>
+            </div>
+
+            <p>
+              Более 70% новых брокеров работают без лицензии. Всегда проверяйте
+              регулирование компании перед инвестированием.
+            </p>
+            <button>Узнать больше</button>
+          </div>
+
+          <div class="sidebar-card">
+            <h3>Подписка на новости</h3>
+            <p>
+              Получайте еженедельные обзоры новых компаний и предупреждения о
+              мошенниках
+            </p>
+            <form class="newsletter-form">
+              <input type="email" placeholder="Ваш email" required />
+              <button type="submit">
+                <i class="fas fa-envelope"></i> Подписаться
+              </button>
+            </form>
+          </div>
+        </aside>
+      </div>
+
+      <!-- Order Review Section -->
+      <section class="order-review">
+        <h2>Закажите обзор на компанию</h2>
+        <p>
+          Наши эксперты проведут детальный анализ компании и подготовят
+          подробный отчет о рисках и возможностях
+        </p>
+        <button><i class="fas fa-file-alt"></i> Заказать обзор</button>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+  </body>
+</html>
