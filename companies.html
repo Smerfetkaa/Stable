@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Компании - StableReviews</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/main.css" />
+
+    <!-- External Libraries -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- JavaScript -->
+    <script src="js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="header" id="header"></header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+      <div class="container">
+        <nav>
+          <ol>
+            <li><a href="index.html">Главная</a></li>
+            <li class="separator"><i class="fas fa-chevron-right"></i></li>
+            <li>Компании</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="companies-page">
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+          <h1>Все компании</h1>
+          <p>Найдите быстро интересующие вас товары и услуги</p>
+          <a href="#" class="btn btn-primary add-company-btn">
+            <i class="fas fa-plus"></i> Добавить Компанию
+          </a>
+        </div>
+
+        <div class="companies-content">
+          <div class="companies-main">
+            <!-- Search and Filters -->
+            <div class="search-filters">
+              <div class="search-section">
+                <form class="companies-search-form">
+                  <input
+                    type="text"
+                    placeholder="Поиск компаний по названию или домену..."
+                    class="search-input"
+                  />
+                  <button type="submit" class="search-btn">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+              </div>
+
+              <div class="filter-section">
+                <div class="filter-group">
+                  <label>Категория:</label>
+                  <select class="filter-select">
+                    <option value="">Все категории</option>
+                    <option value="brokers">Брокеры</option>
+                    <option value="crypto">Криптобиржи</option>
+                    <option value="investment">Инвестпроекты</option>
+                    <option value="exchangers">Обменники</option>
+                  </select>
+                </div>
+
+                <div class="filter-group">
+                  <label>Рейтинг:</label>
+                  <select class="filter-select">
+                    <option value="">Любой рейтинг</option>
+                    <option value="5">5 звезд</option>
+                    <option value="4">4+ звезд</option>
+                    <option value="3">3+ звезд</option>
+                    <option value="2">2+ звезд</option>
+                    <option value="1">1+ звезд</option>
+                  </select>
+                </div>
+
+                <div class="filter-group">
+                  <label>Статус:</label>
+                  <select class="filter-select">
+                    <option value="">Все</option>
+                    <option value="verified">Проверенные</option>
+                    <option value="warning">Подозрительные</option>
+                    <option value="scam">Мошенники</option>
+                  </select>
+                </div>
+
+                <div class="filter-group">
+                  <label>Сортировка:</label>
+                  <select class="filter-select">
+                    <option value="newest">Новые первыми</option>
+                    <option value="rating">По рейтингу</option>
+                    <option value="reviews">По отзывам</option>
+                    <option value="alphabetical">По алфавиту</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <!-- Companies Grid -->
+            <div class="companies-results">
+              <div class="results-header">
+                <span class="results-count">Найдено: <strong>5,426</strong> компаний</span>
+                <div class="view-toggle">
+                  <button class="view-btn active" data-view="grid">
+                    <i class="fas fa-th"></i>
+                  </button>
+                  <button class="view-btn" data-view="list">
+                    <i class="fas fa-list"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="companies-grid" id="companiesGrid">
+                <!-- Company Card 1 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo verified">XM</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">XM Group</a></h3>
+                      <div class="company-domain">xm.com</div>
+                      <div class="company-category">
+                        <i class="fas fa-chart-line"></i> Брокер
+                      </div>
+                    </div>
+                    <div class="company-status status-verified">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Проверено</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-score">4.5</span>
+                    <span class="reviews-count">(847 отзывов)</span>
+                  </div>
+
+                  <p class="company-description">
+                    Международный форекс-брокер с лицензиями от ведущих регуляторов. 
+                    Более 10 лет на рынке, широкий выбор инструментов.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2009</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Лицензия: CySEC</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Company Card 2 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo warning">PU</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">PU Prime</a></h3>
+                      <div class="company-domain">puprime.com</div>
+                      <div class="company-category">
+                        <i class="fas fa-chart-line"></i> Брокер
+                      </div>
+                    </div>
+                    <div class="company-status status-warning">
+                      <i class="fas fa-exclamation-triangle"></i>
+                      <span>Осторожно</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-score">3.0</span>
+                    <span class="reviews-count">(234 отзыва)</span>
+                  </div>
+
+                  <p class="company-description">
+                    CFD-брокер с лицензиями от нескольких регуляторов, но есть жалобы 
+                    на исполнение ордеров и техническую поддержку.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2015</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Лицензия: FSC</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Company Card 3 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo verified">EX</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">Exness</a></h3>
+                      <div class="company-domain">exness.com</div>
+                      <div class="company-category">
+                        <i class="fas fa-chart-line"></i> Брокер
+                      </div>
+                    </div>
+                    <div class="company-status status-verified">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Проверено</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <span class="rating-score">4.8</span>
+                    <span class="reviews-count">(1,523 отзыва)</span>
+                  </div>
+
+                  <p class="company-description">
+                    Один из крупнейших форекс-брокеров в мире. Надежная компания 
+                    с отличной репутацией и быстрым исполнением ордеров.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2008</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Лицензия: FCA</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Company Card 4 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo scam">AL</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">Alliance</a></h3>
+                      <div class="company-domain">alliance-platform.com</div>
+                      <div class="company-category">
+                        <i class="fas fa-chart-line"></i> Брокер
+                      </div>
+                    </div>
+                    <div class="company-status status-scam">
+                      <i class="fas fa-times-circle"></i>
+                      <span>Мошенник</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-score">1.2</span>
+                    <span class="reviews-count">(89 отзывов)</span>
+                  </div>
+
+                  <p class="company-description">
+                    Многочисленные жалобы на невозврат средств и блокировку счетов. 
+                    Не рекомендуется к использованию.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2021</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Без лицензии</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Company Card 5 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo verified">BN</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">Binance</a></h3>
+                      <div class="company-domain">binance.com</div>
+                      <div class="company-category">
+                        <i class="fab fa-bitcoin"></i> Криптобиржа
+                      </div>
+                    </div>
+                    <div class="company-status status-verified">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Проверено</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <span class="rating-score">4.3</span>
+                    <span class="reviews-count">(2,847 отзывов)</span>
+                  </div>
+
+                  <p class="company-description">
+                    Крупнейшая криптовалютная биржа в мире по объемам торгов. 
+                    Широкий выбор криптовалют и торговых инструментов.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2017</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Лицензия: MSB</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+
+                <!-- Company Card 6 -->
+                <article class="company-card">
+                  <div class="company-header">
+                    <div class="company-logo verified">FX</div>
+                    <div class="company-info">
+                      <h3><a href="single_review.html">FXOpen</a></h3>
+                      <div class="company-domain">fxopen.com</div>
+                      <div class="company-category">
+                        <i class="fas fa-chart-line"></i> Брокер
+                      </div>
+                    </div>
+                    <div class="company-status status-verified">
+                      <i class="fas fa-check-circle"></i>
+                      <span>Проверено</span>
+                    </div>
+                  </div>
+
+                  <div class="company-rating-block">
+                    <div class="stars">
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="fas fa-star"></i>
+                      <i class="far fa-star"></i>
+                    </div>
+                    <span class="rating-score">3.8</span>
+                    <span class="reviews-count">(456 отзывов)</span>
+                  </div>
+
+                  <p class="company-description">
+                    Форекс и CFD брокер с 2005 года. Предлагает ECN счета 
+                    и хорошие условия для скальпинга.
+                  </p>
+
+                  <div class="company-stats">
+                    <div class="stat-item">
+                      <i class="fas fa-calendar"></i>
+                      <span>Основан: 2005</span>
+                    </div>
+                    <div class="stat-item">
+                      <i class="fas fa-shield-alt"></i>
+                      <span>Лицензия: ASIC</span>
+                    </div>
+                  </div>
+
+                  <div class="company-actions">
+                    <a href="single_review.html" class="btn btn-primary">
+                      <i class="fas fa-eye"></i> Смотреть обзор
+                    </a>
+                    <button class="btn btn-outline">
+                      <i class="fas fa-heart"></i>
+                    </button>
+                  </div>
+                </article>
+              </div>
+
+              <!-- Pagination -->
+              <div class="pagination">
+                <button class="page-btn" disabled>
+                  <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <span class="page-dots">...</span>
+                <button class="page-btn">47</button>
+                <button class="page-btn">
+                  <i class="fas fa-chevron-right"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="companies-sidebar">
+            <!-- Top Categories -->
+            <div class="sidebar-card">
+              <h3>Популярные категории</h3>
+              <div class="category-list">
+                <a href="#" class="category-item">
+                  <i class="fas fa-chart-line"></i>
+                  <span>Брокеры</span>
+                  <span class="category-count">2,847</span>
+                </a>
+                <a href="#" class="category-item">
+                  <i class="fab fa-bitcoin"></i>
+                  <span>Криптобиржи</span>
+                  <span class="category-count">456</span>
+                </a>
+                <a href="#" class="category-item">
+                  <i class="fas fa-coins"></i>
+                  <span>Инвестпроекты</span>
+                  <span class="category-count">1,234</span>
+                </a>
+                <a href="#" class="category-item">
+                  <i class="fas fa-exchange-alt"></i>
+                  <span>Обменники</span>
+                  <span class="category-count">789</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Top Rated -->
+            <div class="sidebar-card">
+              <h3>Лучшие по рейтингу</h3>
+              <div class="top-companies">
+                <div class="top-company-item">
+                  <div class="company-mini-logo">EX</div>
+                  <div class="company-mini-info">
+                    <h4>Exness</h4>
+                    <div class="mini-rating">
+                      <div class="stars-mini">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                      </div>
+                      <span>4.8</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="top-company-item">
+                  <div class="company-mini-logo">XM</div>
+                  <div class="company-mini-info">
+                    <h4>XM Group</h4>
+                    <div class="mini-rating">
+                      <div class="stars-mini">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <span>4.5</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="top-company-item">
+                  <div class="company-mini-logo">BN</div>
+                  <div class="company-mini-info">
+                    <h4>Binance</h4>
+                    <div class="mini-rating">
+                      <div class="stars-mini">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                      </div>
+                      <span>4.3</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Statistics -->
+            <div class="sidebar-card">
+              <h3>Статистика</h3>
+              <div class="stats-list">
+                <div class="stat-row">
+                  <span>Всего компаний:</span>
+                  <strong>5,426</strong>
+                </div>
+                <div class="stat-row">
+                  <span>Проверенных:</span>
+                  <strong>1,847</strong>
+                </div>
+                <div class="stat-row">
+                  <span>Мошенников:</span>
+                  <strong>234</strong>
+                </div>
+                <div class="stat-row">
+                  <span>Добавлено сегодня:</span>
+                  <strong>12</strong>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Company CTA -->
+            <div class="sidebar-card cta-card">
+              <h3>Не нашли компанию?</h3>
+              <p>Добавьте её в нашу базу данных и получите детальный обзор.</p>
+              <a href="#" class="btn btn-primary btn-block">
+                <i class="fas fa-plus"></i> Добавить компанию
+              </a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="footer"></footer>
+  </body>
+</html>

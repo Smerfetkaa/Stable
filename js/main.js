@@ -266,3 +266,31 @@ const observers = new IntersectionObserver((entries) => {
 document.querySelectorAll(".stats-counter").forEach((counter) => {
   observers.observe(counter);
 });
+
+function toggleFAQ(button) {
+  const faqItem = button.closest(".faq-item");
+  faqItem.classList.toggle("active");
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".popular-btn");
+  const input = document.getElementById("companyInput");
+  const form = document.getElementById("checkForm");
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const companyName = this.textContent;
+      input.value = companyName;
+      form.requestSubmit();
+    });
+  });
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const query = input.value.trim();
+
+    if (query) {
+      window.location.href = `/search.html?q=${encodeURIComponent(query)}`;
+    }
+  });
+});

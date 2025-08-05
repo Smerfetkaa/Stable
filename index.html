@@ -37,8 +37,10 @@
             Узнайте всю правду о брокере или инвестиционном проекте, прежде чем
             вносить деньги на депозит.
           </p>
-          <form class="check-form">
+          <div class="check-form-container">
+            <form class="check-form" id="checkForm">
             <input
+            id="companyInput"
               type="text"
               placeholder="Введите название компании или сайт"
               required
@@ -47,6 +49,14 @@
               <i class="fas fa-search"></i> Проверить
             </button>
           </form>
+          <div class="popular-companies">
+            <span>Популярные запросы</span>
+            <button class="popular-btn">ExpertOption</button>
+            <button class="popular-btn">ExpertOption</button>
+            <button class="popular-btn">ExpertOption</button>
+          </div>
+          </div>
+          
         </div>
       </div>
     </div>
@@ -74,113 +84,7 @@
     <main class="container">
       <div class="main-content">
         <div class="main-column">
-          <!-- Latest Reviews Section -->
-          <section class="content-section">
-            <h2 class="section-title">Последние отзывы</h2>
-            <div class="reviews-grid">
-              <article class="review-card">
-                <div class="review-content">
-                  <div class="review-text-block">
-                    <div class="review-logo-container">
-                      <a
-                        href="https://example.com/alliance"
-                        class="review-logo-link"
-                      >
-                        <img
-                          src="https://www.rsainsurance.co.uk/static/7107093a03c040dfa1c49a47d275b8ae/rsa-intact-logo.svg"
-                          alt="Alliance"
-                          class="review-logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="review-company">Alliance платформа</div>
-                    <p class="review-text">
-                      Это мошенники! Все высасывают, до копейки, одни аферисты
-                      там сидят, даже канал у них, который состоит из ботов, все
-                      выкладывают проверка тест обрезка текста
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="review-card">
-                <div class="review-content">
-                  <div class="review-text-block">
-                    <div class="review-logo-container">
-                      <a
-                        href="https://example.com/alliance"
-                        class="review-logo-link"
-                      >
-                        <img
-                          src="https://vsyapravda.net/themes/vsyapravda/assets/build/img/main/logo.svg"
-                          alt="Alliance"
-                          class="review-logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="review-company">Неизвестная компания</div>
-                    <p class="review-text">
-                      потерял 6 500 баксов. часть денег депозиты, часть оплата
-                      страховки на вывод… развод чистой воды. заработать не дали
-                    </p>
-                  </div>
-                </div>
-              </article>
-              <article class="review-card">
-                <div class="review-content">
-                  <div class="review-text-block">
-                    <div class="review-logo-container">
-                      <a
-                        href="https://example.com/alliance"
-                        class="review-logo-link"
-                      >
-                        <img
-                          src="https://broker-alliance.ru/wp-content/uploads/2024/11/logo.svg"
-                          alt="Alliance"
-                          class="review-logo"
-                        />
-                      </a>
-                    </div>
-                    <div class="review-company">Название</div>
-                    <p class="review-text">
-                      потерял 6 500 баксов. часть денег депозиты, часть оплата
-                      страховки на вывод… развод чистой воды. заработать не дали
-                    </p>
-                  </div>
-                </div>
-              </article>
-            </div>
-          </section>
 
-          <!-- Categories Section -->
-          <section class="content-section">
-            <h2 class="section-title">Категории компаний</h2>
-            <div class="categories-grid">
-              <div class="category-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Брокеры</h3>
-
-                <div class="count">2,847 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fab fa-bitcoin"></i>
-
-                <h3>Криптобиржи</h3>
-                <div class="count">456 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fas fa-coins"></i>
-                <h3>Инвестпроекты</h3>
-
-                <div class="count">1,234 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fas fa-exchange-alt"></i>
-                <h3>Обменники</h3>
-
-                <div class="count">789 компаний</div>
-              </div>
-            </div>
-          </section>
 
           <!-- Latest Companies Section -->
           <section class="content-section">
@@ -205,8 +109,45 @@
                   <span class="rating-text">4.5 из 5</span>
                 </div>
               </article>
-
-              <article class="company-card">
+ <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">XM</div>
+                  <div class="company-info">
+                    <h4>XM Group</h4>
+                    <div class="domain">xm.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="rating-text">4.5 из 5</span>
+                </div>
+              </article>
+               <article class="company-card">
+                <div class="company-header">
+                  <div class="company-logo">XM</div>
+                  <div class="company-info">
+                    <h4>XM Group</h4>
+                    <div class="domain">xm.com</div>
+                  </div>
+                </div>
+                <div class="company-rating">
+                  <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                  </div>
+                  <span class="rating-text">4.5 из 5</span>
+                </div>
+              </article>
+                            <article class="company-card">
                 <div class="company-header">
                   <div class="company-logo">PU</div>
                   <div class="company-info">
@@ -307,10 +248,129 @@
               </article>
             </div>
           </section>
+
+          <!-- Latest Blog Articles Section -->
+          <section class="content-section">
+            <h2 class="section-title">Последние статьи</h2>
+            <div class="blog-articles blog-grid">
+              <article class="blog-card ">
+                <div class="blog-image">
+                  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title"><a href="#">Как определить мошеннический брокер: 10 признаков</a></h3>
+                                   <div class="blog-meta">
+                    <span class="blog-date"><i class="fas fa-calendar"></i> 28 января 2025</span>
+                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 5 мин чтения</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="blog-card">
+                <div class="blog-image">
+                  <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title"><a href="#">Топ-10 самых надежных брокеров 2025 года</a></h3>
+                 
+                  <div class="blog-meta">
+                    <span class="blog-date"><i class="fas fa-calendar"></i> 25 января 2025</span>
+                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 8 мин чтения</span>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-card">
+                <div class="blog-image">
+                  <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title"><a href="#">Топ-10 самых надежных брокеров 2025 года</a></h3>
+                 
+                  <div class="blog-meta">
+                    <span class="blog-date"><i class="fas fa-calendar"></i> 25 января 2025</span>
+                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 8 мин чтения</span>
+                  </div>
+                </div>
+              </article>
+
+              <article class="blog-card">
+                <div class="blog-image">
+                  <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                </div>
+                <div class="blog-content">
+                  <h3 class="blog-title"><a href="#">Как вернуть деньги от мошенников: пошаговая инструкция</a></h3>
+                 
+                  <div class="blog-meta">
+                    <span class="blog-date"><i class="fas fa-calendar"></i> 22 января 2025</span>
+                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 12 мин чтения</span>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
         </div>
 
         <!-- Sidebar -->
         <aside class="sidebar">
+          <!-- Latest Reviews in Sidebar -->
+          <div class="sidebar-card">
+            <h3>Последние отзывы</h3>
+            <div class="sidebar-reviews">
+              <div class="sidebar-review">
+                <div class="review-company-mini">Alliance платформа</div>
+                <p class="review-text-mini">Это мошенники! Все высасывают, до копейки...</p>
+                <div class="review-rating-mini">
+                  <div class="stars-mini">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                      <a href="#">Читать дальше...</a> 
+                </div>
+            
+              </div>
+
+              <div class="sidebar-review">
+                <div class="review-company-mini">PU Prime</div>
+                <p class="review-text-mini">Работаю полгода, выводы проходят без проблем...</p>
+                <div class="review-rating-mini">
+                  <div class="stars-mini">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                   <a href="#">Читать дальше...</a> 
+                </div>
+              </div>
+
+              <div class="sidebar-review">
+                <div class="review-company-mini">Неизвестная компания</div>
+                <p class="review-text-mini">потерял 6 500 баксов. развод чистой воды...</p>
+                <div class="review-rating-mini">
+                  <div class="stars-mini">
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <i class="far fa-star"></i>
+                  </div>
+                   <a href="#">Читать дальше...</a> 
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Add Company Form -->
+          <div class="sidebar-card">
+            <h3>Добавить компанию</h3>
+            <p>Не нашли нужную компанию? Добавьте её в нашу базу данных.</p>
+            <a href="#" class="add-company-link">Заполните форму</a></p>
+          </div>
+
           <div class="sidebar-card quick-check">
             <h3>Быстрая проверка</h3>
             <p>Проверка займет не более 30 секунд</p>
@@ -327,6 +387,22 @@
                 <div class="reviews-count">156 отзывов</div>
               </div>
             </div>
+             <div class="discussed-item">
+              <div class="discussed-info">
+                <h4>
+                  <a href="single_review.html">WorldwideTrade</a>
+                </h4>
+                <div class="reviews-count">156 отзывов</div>
+              </div>
+            </div>
+             <div class="discussed-item">
+              <div class="discussed-info">
+                <h4>
+                  <a href="single_review.html">WorldwideTrade</a>
+                </h4>
+                <div class="reviews-count">156 отзывов</div>
+              </div>
+            </div>  
           </div>
 
           <div class="sidebar-card alert-box">
@@ -334,7 +410,6 @@
               <i class="fas fa-exclamation-triangle"></i>
               <h4>Важно знать!</h4>
             </div>
-
             <p>
               Более 70% новых брокеров работают без лицензии. Всегда проверяйте
               регулирование компании перед инвестированием.
@@ -359,6 +434,32 @@
       </div>
 
       <!-- Order Review Section -->
+                 <!-- Categories Section -->
+          <section class="categories-section">
+            <h2 class="section-title categories-section-title">Категории компаний</h2>
+            <div class="categories-grid">
+              <div class="category-card">
+                <i class="fas fa-chart-line"></i>
+                <h3>Брокеры</h3>
+                <div class="count">2,847 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fab fa-bitcoin"></i>
+                <h3>Криптобиржи</h3>
+                <div class="count">456 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fas fa-coins"></i>
+                <h3>Инвестпроекты</h3>
+                <div class="count">1,234 компаний</div>
+              </div>
+              <div class="category-card">
+                <i class="fas fa-exchange-alt"></i>
+                <h3>Обменники</h3>
+                <div class="count">789 компаний</div>
+              </div>
+            </div>
+          </section>
       <section class="order-review">
         <h2>Закажите обзор на компанию</h2>
         <p>
