@@ -1073,6 +1073,9 @@ margin: 30px 0;
 .info-table tr:hover {
   background: #f7fafc;
 }
+.banner-invest img{
+  max-width: 100%;
+}
 
 /* Content Text */
 .review-container{
