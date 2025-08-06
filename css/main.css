@@ -187,7 +187,7 @@ body {
   background: #2b6cb0;
   color: white;
   text-decoration: none;
-} 
+}
 .btn-danger {
   background: #e53e3e;
   color: white;
@@ -479,11 +479,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
 }
-.categories-section-title{
-      text-align: center;
+.categories-section-title {
+  text-align: center;
 }
-.categories-section{
-margin: 30px 0;
+.categories-section {
+  margin: 30px 0;
 }
 .category-card {
   padding: 25px;
@@ -1073,12 +1073,12 @@ margin: 30px 0;
 .info-table tr:hover {
   background: #f7fafc;
 }
-.banner-invest img{
+.banner-invest img {
   max-width: 100%;
 }
 
 /* Content Text */
-.review-container{
+.review-container {
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
@@ -1179,6 +1179,35 @@ margin: 30px 0;
 .comment-content-row > p {
   font-style: italic;
 }
+
+.error-message {
+  color: #dc3545;
+  background-color: #f8d7da;
+  border: 1px solid #f5c6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.user-rating-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+.user-rating .star {
+  cursor: pointer;
+}
+#formMessage {
+  margin-bottom: 15px;
+}
 /* Sidebar */
 .sidebar {
   display: flex;
@@ -1215,7 +1244,6 @@ margin: 30px 0;
   padding: 0.75rem;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
-  transition: background 0.3s;
   cursor: pointer;
   margin-bottom: 0.75rem;
 }
@@ -1405,10 +1433,6 @@ margin: 30px 0;
   transform: rotate(180deg);
 }
 
-/* ========================================
-   NEW STYLES FOR WEBSITE MODIFICATIONS
-   ======================================== */
-
 /* Sidebar Reviews Styles */
 .sidebar-reviews {
   background: white;
@@ -1457,7 +1481,6 @@ margin: 30px 0;
 
 .review-company-mini a:hover {
   color: #3b82f6;
-
 }
 
 .review-text-mini {
@@ -2022,7 +2045,6 @@ margin: 30px 0;
   align-items: center;
   gap: 6px;
 }
-
 
 .btn-outline {
   background: transparent;

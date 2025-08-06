@@ -115,7 +115,7 @@
                 на которые стоит обратить внимание перед инвестированием.
               </p>
             </div>-->
-            <div class="banner-invest" >
+            <div class="banner-invest">
               <img src="image/banner1.png" />
             </div>
             <!-- Main Content from Admin -->
@@ -372,6 +372,57 @@
                 </div>
               </div>
             </div>
+            <div class="review-container">
+              <h3>Оставьте свой отзыв</h3>
+
+              <form id="commentForm" class="form-group" novalidate>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control"
+                    placeholder="Ваше имя"
+                    required
+                  />
+                </div>
+
+                <div class="form-group">
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Email"
+                    required
+                  />
+                </div>
+                <div class="user-rating-container">
+                  <p>Оставьте оценку</p>
+                  <span class="user-rating">
+                    <i class="fa fa-star star inactive" title="Very Bad"></i>
+                    <i class="fa fa-star star inactive" title="Bad"></i>
+                    <i class="fa fa-star star inactive" title="Good"></i>
+                    <i class="fa fa-star star inactive" title="Very Good"></i>
+                    <i class="fa fa-star star inactive" title="Excellent"></i>
+                  </span>
+                </div>
+                <div class="form-group">
+                  <textarea
+                    id="comment"
+                    name="comment"
+                    class="form-control"
+                    placeholder="Ваш отзыв"
+                    rows="10"
+                    required
+                  ></textarea>
+                </div>
+                <div id="formMessage"></div>
+                <button type="submit" class="btn btn-primary btn-block">
+                  Отправить отзыв
+                </button>
+              </form>
+            </div>
           </div>
 
           <!-- Sidebar -->
@@ -398,10 +449,11 @@
             <!-- Contact Form -->
             <div class="sidebar-card">
               <h3>Нужна помощь?</h3>
-              <form>
+              <form novalidate>
                 <div class="form-group">
                   <input
                     type="text"
+                    name="name"
                     class="form-control"
                     placeholder="Ваше имя"
                     required
@@ -409,6 +461,7 @@
                 </div>
                 <div class="form-group">
                   <input
+                    name="email"
                     type="email"
                     class="form-control"
                     placeholder="Email"
@@ -417,6 +470,7 @@
                 </div>
                 <div class="form-group">
                   <textarea
+                    name="text"
                     class="form-control"
                     rows="4"
                     placeholder="Опишите вашу проблему"
@@ -503,9 +557,5 @@
 
     <!-- Footer -->
     <footer class="footer" id="footer"></footer>
-    <script
-      data-cfasync="false"
-      src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"
-    ></script>
   </body>
 </html>
