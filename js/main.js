@@ -210,16 +210,7 @@ function clearMessage(container) {
   container.textContent = "";
   container.style.display = "none";
 }
-const iti = window.intlTelInput(input, {
-  initialCountry: "ru",
-  preferredCountries: ["ru", "ua", "kz", "us"],
-  separateDialCode: true,
-  nationalMode: true,
-  autoHideDialCode: false,
-  formatOnDisplay: true,
-  utilsScript:
-    "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
-});
+
 // Форма коммента
 document.addEventListener("DOMContentLoaded", function () {
   const commentForm = document.getElementById("commentForm");
@@ -311,7 +302,16 @@ document.addEventListener("DOMContentLoaded", function () {
   );
   const formResponse = document.getElementById("formResponse");
   const input = document.querySelector("#clientPhone");
-
+const iti = window.intlTelInput(input, {
+  initialCountry: "ru",
+  preferredCountries: ["ru", "ua", "kz", "us"],
+  separateDialCode: true,
+  nationalMode: true,
+  autoHideDialCode: false,
+  formatOnDisplay: true,
+  utilsScript:
+    "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
+});
   // Обработка отправки формы
   legalConsultationForm.addEventListener("submit", function (e) {
     e.preventDefault();
