@@ -309,7 +309,7 @@ document.addEventListener("DOMContentLoaded", function () {
     nationalMode: true,
     autoHideDialCode: false,
     formatOnDisplay: true,
-    dropdownContainer: input.closest(".form-group"),
+    dropdownContainer: input.closest(".iti-container"),
     utilsScript:
       "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js",
   });
