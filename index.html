@@ -17,6 +17,10 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css"
+    />
 
     <!-- JavaScript -->
     <script src="js/main.js" defer></script>
@@ -39,24 +43,22 @@
           </p>
           <div class="check-form-container">
             <form class="check-form" id="checkForm">
-            <input
-            id="companyInput"
-              type="text"
-              placeholder="Введите название компании или сайт"
-              required
-            />
-            <button type="submit">
-              <i class="fas fa-search"></i> Проверить
-            </button>
-          </form>
-          <div class="popular-companies">
-            <span>Популярные запросы</span>
-            <button class="popular-btn">ExpertOption</button>
-            <button class="popular-btn">ExpertOption</button>
-            <button class="popular-btn">ExpertOption</button>
+              <input
+                id="companyInput"
+                type="text"
+                placeholder="Введите название компании или сайт"
+              />
+              <button type="submit">
+                <i class="fas fa-search"></i> Проверить
+              </button>
+            </form>
+            <div class="popular-companies">
+              <span>Популярные запросы</span>
+              <button class="popular-btn">ExpertOption</button>
+              <button class="popular-btn">ExpertOption</button>
+              <button class="popular-btn">ExpertOption</button>
+            </div>
           </div>
-          </div>
-          
         </div>
       </div>
     </div>
@@ -84,8 +86,6 @@
     <main class="container">
       <div class="main-content">
         <div class="main-column">
-
-
           <!-- Latest Companies Section -->
           <section class="content-section">
             <h2 class="section-title">Последние добавленные компании</h2>
@@ -109,7 +109,7 @@
                   <span class="rating-text">4.5 из 5</span>
                 </div>
               </article>
- <article class="company-card">
+              <article class="company-card">
                 <div class="company-header">
                   <div class="company-logo">XM</div>
                   <div class="company-info">
@@ -128,7 +128,7 @@
                   <span class="rating-text">4.5 из 5</span>
                 </div>
               </article>
-               <article class="company-card">
+              <article class="company-card">
                 <div class="company-header">
                   <div class="company-logo">XM</div>
                   <div class="company-info">
@@ -147,7 +147,7 @@
                   <span class="rating-text">4.5 из 5</span>
                 </div>
               </article>
-                            <article class="company-card">
+              <article class="company-card">
                 <div class="company-header">
                   <div class="company-logo">PU</div>
                   <div class="company-info">
@@ -253,56 +253,96 @@
           <section class="content-section">
             <h2 class="section-title">Последние статьи</h2>
             <div class="blog-articles blog-grid">
-              <article class="blog-card ">
+              <article class="blog-card">
                 <div class="blog-image">
-                  <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                  <img
+                    src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=400&h=250&fit=crop&crop=center"
+                    alt="Статья блога"
+                  />
                 </div>
                 <div class="blog-content">
-                  <h3 class="blog-title"><a href="#">Как определить мошеннический брокер: 10 признаков</a></h3>
-                                   <div class="blog-meta">
-                    <span class="blog-date"><i class="fas fa-calendar"></i> 28 января 2025</span>
-                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 5 мин чтения</span>
+                  <h3 class="blog-title">
+                    <a href="#"
+                      >Как определить мошеннический брокер: 10 признаков</a
+                    >
+                  </h3>
+                  <div class="blog-meta">
+                    <span class="blog-date"
+                      ><i class="fas fa-calendar"></i> 28 января 2025</span
+                    >
+                    <span class="blog-reading-time"
+                      ><i class="fas fa-clock"></i> 5 мин чтения</span
+                    >
                   </div>
                 </div>
               </article>
 
               <article class="blog-card">
                 <div class="blog-image">
-                  <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                  <img
+                    src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center"
+                    alt="Статья блога"
+                  />
                 </div>
                 <div class="blog-content">
-                  <h3 class="blog-title"><a href="#">Топ-10 самых надежных брокеров 2025 года</a></h3>
-                 
+                  <h3 class="blog-title">
+                    <a href="#">Топ-10 самых надежных брокеров 2025 года</a>
+                  </h3>
+
                   <div class="blog-meta">
-                    <span class="blog-date"><i class="fas fa-calendar"></i> 25 января 2025</span>
-                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 8 мин чтения</span>
+                    <span class="blog-date"
+                      ><i class="fas fa-calendar"></i> 25 января 2025</span
+                    >
+                    <span class="blog-reading-time"
+                      ><i class="fas fa-clock"></i> 8 мин чтения</span
+                    >
                   </div>
                 </div>
               </article>
               <article class="blog-card">
                 <div class="blog-image">
-                  <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                  <img
+                    src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?w=400&h=250&fit=crop&crop=center"
+                    alt="Статья блога"
+                  />
                 </div>
                 <div class="blog-content">
-                  <h3 class="blog-title"><a href="#">Топ-10 самых надежных брокеров 2025 года</a></h3>
-                 
+                  <h3 class="blog-title">
+                    <a href="#">Топ-10 самых надежных брокеров 2025 года</a>
+                  </h3>
+
                   <div class="blog-meta">
-                    <span class="blog-date"><i class="fas fa-calendar"></i> 25 января 2025</span>
-                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 8 мин чтения</span>
+                    <span class="blog-date"
+                      ><i class="fas fa-calendar"></i> 25 января 2025</span
+                    >
+                    <span class="blog-reading-time"
+                      ><i class="fas fa-clock"></i> 8 мин чтения</span
+                    >
                   </div>
                 </div>
               </article>
 
               <article class="blog-card">
                 <div class="blog-image">
-                  <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=center" alt="Статья блога" />
+                  <img
+                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=400&h=250&fit=crop&crop=center"
+                    alt="Статья блога"
+                  />
                 </div>
                 <div class="blog-content">
-                  <h3 class="blog-title"><a href="#">Как вернуть деньги от мошенников: пошаговая инструкция</a></h3>
-                 
+                  <h3 class="blog-title">
+                    <a href="#"
+                      >Как вернуть деньги от мошенников: пошаговая инструкция</a
+                    >
+                  </h3>
+
                   <div class="blog-meta">
-                    <span class="blog-date"><i class="fas fa-calendar"></i> 22 января 2025</span>
-                    <span class="blog-reading-time"><i class="fas fa-clock"></i> 12 мин чтения</span>
+                    <span class="blog-date"
+                      ><i class="fas fa-calendar"></i> 22 января 2025</span
+                    >
+                    <span class="blog-reading-time"
+                      ><i class="fas fa-clock"></i> 12 мин чтения</span
+                    >
                   </div>
                 </div>
               </article>
@@ -312,13 +352,100 @@
 
         <!-- Sidebar -->
         <aside class="sidebar">
+          <div class="legal-consultation-widget">
+            <div class="widget-header">
+              <div class="icon-badge">⚖️</div>
+              <h3>Верните свои деньги законно</h3>
+              <p class="subtitle">
+                Бесплатный анализ вашей ситуации от юристов
+              </p>
+            </div>
+
+            <div class="benefits-list">
+              <div class="benefit-item">
+                <span class="check-icon">📌</span>
+                <span>Без предоплат</span>
+              </div>
+              <div class="benefit-item">
+                <span class="check-icon">📌</span>
+                <span>Честно и конфиденциально</span>
+              </div>
+              <div class="benefit-item">
+                <span class="check-icon">📌</span>
+                <span>С конкретными шагами к возврату</span>
+              </div>
+            </div>
+
+            <form id="legalConsultationForm" class="consultation-form">
+              <div class="form-group">
+                <input
+                  type="text"
+                  id="clientName"
+                  name="clientName"
+                  placeholder="Ваше имя"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="tel"
+                  id="clientPhone"
+                  name="clientPhone"
+                  placeholder="(___) ___-__-__"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <input
+                  type="email"
+                  id="clientEmail"
+                  name="clientEmail"
+                  placeholder="Email для связи"
+                  class="form-input"
+                />
+              </div>
+
+              <div class="form-group">
+                <textarea
+                  id="clientSituation"
+                  name="clientSituation"
+                  placeholder="Кратко опишите вашу ситуацию (название компании, сумма потерь)"
+                  rows="3"
+                  class="form-textarea"
+                ></textarea>
+              </div>
+
+              <div class="checkbox-group">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="dataConsent" name="dataConsent" />
+                  <span class="checkmark"></span>
+                  <span class="checkbox-text">
+                    Я даю согласие на
+                    <a href="#privacy-policy" class="privacy-link"
+                      >обработку персональных данных</a
+                    >
+                  </span>
+                </label>
+              </div>
+              <div id="formResponse" class="form-message"></div>
+              <button type="submit" class="submit-btn">
+                <span class="btn-text">Получить бесплатную консультацию</span>
+                <span class="btn-icon">💬</span>
+              </button>
+            </form>
+          </div>
+
           <!-- Latest Reviews in Sidebar -->
           <div class="sidebar-card">
             <h3>Последние отзывы</h3>
             <div class="sidebar-reviews">
               <div class="sidebar-review">
                 <div class="review-company-mini">Alliance платформа</div>
-                <p class="review-text-mini">Это мошенники! Все высасывают, до копейки...</p>
+                <p class="review-text-mini">
+                  Это мошенники! Все высасывают, до копейки...
+                </p>
                 <div class="review-rating-mini">
                   <div class="stars-mini">
                     <i class="fas fa-star"></i>
@@ -327,14 +454,15 @@
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                   </div>
-                      <a href="#">Читать дальше...</a> 
+                  <a href="#">Читать дальше...</a>
                 </div>
-            
               </div>
 
               <div class="sidebar-review">
                 <div class="review-company-mini">PU Prime</div>
-                <p class="review-text-mini">Работаю полгода, выводы проходят без проблем...</p>
+                <p class="review-text-mini">
+                  Работаю полгода, выводы проходят без проблем...
+                </p>
                 <div class="review-rating-mini">
                   <div class="stars-mini">
                     <i class="fas fa-star"></i>
@@ -343,13 +471,15 @@
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                   </div>
-                   <a href="#">Читать дальше...</a> 
+                  <a href="#">Читать дальше...</a>
                 </div>
               </div>
 
               <div class="sidebar-review">
                 <div class="review-company-mini">Неизвестная компания</div>
-                <p class="review-text-mini">потерял 6 500 баксов. развод чистой воды...</p>
+                <p class="review-text-mini">
+                  потерял 6 500 баксов. развод чистой воды...
+                </p>
                 <div class="review-rating-mini">
                   <div class="stars-mini">
                     <i class="fas fa-star"></i>
@@ -358,7 +488,7 @@
                     <i class="far fa-star"></i>
                     <i class="far fa-star"></i>
                   </div>
-                   <a href="#">Читать дальше...</a> 
+                  <a href="#">Читать дальше...</a>
                 </div>
               </div>
             </div>
@@ -368,13 +498,7 @@
           <div class="sidebar-card">
             <h3>Добавить компанию</h3>
             <p>Не нашли нужную компанию? Добавьте её в нашу базу данных.</p>
-            <a href="#" class="add-company-link">Заполните форму</a></p>
-          </div>
-
-          <div class="sidebar-card quick-check">
-            <h3>Быстрая проверка</h3>
-            <p>Проверка займет не более 30 секунд</p>
-            <button><i class="fas fa-search"></i> Проверить сейчас</button>
+            <a href="#" class="add-company-link">Заполните форму</a>
           </div>
 
           <div class="sidebar-card">
@@ -387,7 +511,7 @@
                 <div class="reviews-count">156 отзывов</div>
               </div>
             </div>
-             <div class="discussed-item">
+            <div class="discussed-item">
               <div class="discussed-info">
                 <h4>
                   <a href="single_review.html">WorldwideTrade</a>
@@ -395,14 +519,14 @@
                 <div class="reviews-count">156 отзывов</div>
               </div>
             </div>
-             <div class="discussed-item">
+            <div class="discussed-item">
               <div class="discussed-info">
                 <h4>
                   <a href="single_review.html">WorldwideTrade</a>
                 </h4>
                 <div class="reviews-count">156 отзывов</div>
               </div>
-            </div>  
+            </div>
           </div>
 
           <div class="sidebar-card alert-box">
@@ -417,7 +541,7 @@
             <button>Узнать больше</button>
           </div>
 
-          <div class="sidebar-card">
+          <!-- <div class="sidebar-card">
             <h3>Подписка на новости</h3>
             <p>
               Получайте еженедельные обзоры новых компаний и предупреждения о
@@ -429,37 +553,39 @@
                 <i class="fas fa-envelope"></i> Подписаться
               </button>
             </form>
-          </div>
+          </div> -->
         </aside>
       </div>
 
       <!-- Order Review Section -->
-                 <!-- Categories Section -->
-          <section class="categories-section">
-            <h2 class="section-title categories-section-title">Категории компаний</h2>
-            <div class="categories-grid">
-              <div class="category-card">
-                <i class="fas fa-chart-line"></i>
-                <h3>Брокеры</h3>
-                <div class="count">2,847 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fab fa-bitcoin"></i>
-                <h3>Криптобиржи</h3>
-                <div class="count">456 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fas fa-coins"></i>
-                <h3>Инвестпроекты</h3>
-                <div class="count">1,234 компаний</div>
-              </div>
-              <div class="category-card">
-                <i class="fas fa-exchange-alt"></i>
-                <h3>Обменники</h3>
-                <div class="count">789 компаний</div>
-              </div>
-            </div>
-          </section>
+      <!-- Categories Section -->
+      <section class="categories-section">
+        <h2 class="section-title categories-section-title">
+          Категории компаний
+        </h2>
+        <div class="categories-grid">
+          <div class="category-card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Брокеры</h3>
+            <div class="count">2,847 компаний</div>
+          </div>
+          <div class="category-card">
+            <i class="fab fa-bitcoin"></i>
+            <h3>Криптобиржи</h3>
+            <div class="count">456 компаний</div>
+          </div>
+          <div class="category-card">
+            <i class="fas fa-coins"></i>
+            <h3>Инвестпроекты</h3>
+            <div class="count">1,234 компаний</div>
+          </div>
+          <div class="category-card">
+            <i class="fas fa-exchange-alt"></i>
+            <h3>Обменники</h3>
+            <div class="count">789 компаний</div>
+          </div>
+        </div>
+      </section>
       <section class="order-review">
         <h2>Закажите обзор на компанию</h2>
         <p>
@@ -472,5 +598,6 @@
 
     <!-- Footer -->
     <footer class="footer" id="footer"></footer>
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
   </body>
 </html>

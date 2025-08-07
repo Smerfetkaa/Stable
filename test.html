@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>StableReviews - Телефон с intlTelInput</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css">
+  <link rel="stylesheet" href="css/main.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
+  />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <style>
+    .iti {
+      position: relative;
+    }
+    .iti__country-list {
+      z-index: 10000;
+    }
+  </style>
+</head>
+<body>
+  <form id="legalConsultationForm" class="consultation-form">
+    <div class="form-group">
+      <input 
+        type="text" 
+        id="clientName" 
+        name="clientName" 
+        placeholder="Ваше имя" 
+        required
+        class="form-input"
+      />
+    </div>
+    
+    <div class="form-group">
+      <input 
+        type="tel"
+        id="clientPhone" 
+        name="clientPhone" 
+        placeholder="+7 (___) ___-__-__" 
+        required
+        class="form-input"
+      />
+    </div>
+    
+    <div class="form-group">
+      <input 
+        type="email" 
+        id="clientEmail" 
+        name="clientEmail" 
+        placeholder="Email для связи" 
+        required
+        class="form-input"
+      />
+    </div>
+    
+    <div class="form-group">
+      <textarea 
+        id="clientSituation" 
+        name="clientSituation" 
+        placeholder="Кратко опишите вашу ситуацию (название компании, сумма потерь)" 
+        rows="3"
+        required
+        class="form-textarea"
+      ></textarea>
+    </div>
+    
+    <div class="checkbox-group">
+      <label class="custom-checkbox">
+        <input type="checkbox" id="dataConsent" name="dataConsent" required>
+        <span class="checkmark"></span>
+        <span class="checkbox-text">
+          Я даю согласие на 
+          <a href="#privacy-policy" class="privacy-link">обработку персональных данных</a>
+        </span>
+      </label>
+    </div>
+    
+    <button type="submit" class="submit-btn">
+      <span class="btn-text">Получить бесплатную консультацию</span>
+      <span class="btn-icon">💬</span>
+    </button>
+    
+    <div id="formResponse" class="form-message" style="display: none;"></div>
+  </form>
+
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
+  <script>
+    const input = document.querySelector("#clientPhone");
+
+    const iti = window.intlTelInput(input, {
+      initialCountry: "ru",
+      preferredCountries: ["ru", "ua", "kz", "us"],
+      nationalMode: false,
+      separateDialCode: true,
+      autoHideDialCode: false,
+      formatOnDisplay: true,
+      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js"
+    });
+
+    // Перемещаем dropdown внутрь контейнера .iti, если он случайно в body
+    setTimeout(() => {
+      const dropdown = document.querySelector(".iti__country-list");
+      const container = input.closest(".iti");
+      if (dropdown && container && !container.contains(dropdown)) {
+        container.appendChild(dropdown);
+      }
+    }, 100);
+  </script>
+</body>
+</html>
