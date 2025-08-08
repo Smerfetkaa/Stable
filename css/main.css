@@ -112,10 +112,9 @@ body {
 
 /* Footer */
 .footer {
-  background: linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #1e1b4b 100%);
+  background: linear-gradient(135deg, #625cd6 0%, #003cb8 50%, #1c227a 100%);
   color: white;
   padding: 3rem 0 1rem 0;
-  margin-top: 3rem;
 }
 
 .footer-content {
@@ -277,9 +276,10 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.1)"/></svg>')
-    repeat;
+  background-image: url(../image/fon7.png);
+  background-size: cover;
   opacity: 0.5;
+  background-position: center;
 }
 
 .header-content-main {
@@ -584,7 +584,54 @@ body {
   color: #4a5568;
   font-size: 0.9em;
 }
+.highlight {
+  color: #ffd700;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+.order-review > .banner-cta-btn {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  padding: 16px 32px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 auto;
+  max-width: 320px;
+  text-decoration: none;
+}
 
+.banner-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.banner-cta-btn:active {
+  transform: translateY(0);
+}
+.btn-arrow {
+  font-size: 20px;
+  transition: transform 0.3s ease;
+  font-weight: 900;
+}
+
+.banner-cta-btn:hover .btn-arrow {
+  transform: translateX(4px);
+}
+.section-subtitle {
+  font-size: 18px;
+}
 /* Sidebar */
 .sidebar {
   display: flex;

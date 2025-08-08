@@ -1,114 +1,280 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>StableReviews - Телефон с intlTelInput</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css">
-  <link rel="stylesheet" href="css/main.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css"
-  />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
-  <style>
-    .iti {
-      position: relative;
-    }
-    .iti__country-list {
-      z-index: 10000;
-    }
-  </style>
-</head>
-<body>
-  <form id="legalConsultationForm" class="consultation-form">
-    <div class="form-group">
-      <input 
-        type="text" 
-        id="clientName" 
-        name="clientName" 
-        placeholder="Ваше имя" 
-        required
-        class="form-input"
-      />
-    </div>
-    
-    <div class="form-group">
-      <input 
-        type="tel"
-        id="clientPhone" 
-        name="clientPhone" 
-        placeholder="+7 (___) ___-__-__" 
-        required
-        class="form-input"
-      />
-    </div>
-    
-    <div class="form-group">
-      <input 
-        type="email" 
-        id="clientEmail" 
-        name="clientEmail" 
-        placeholder="Email для связи" 
-        required
-        class="form-input"
-      />
-    </div>
-    
-    <div class="form-group">
-      <textarea 
-        id="clientSituation" 
-        name="clientSituation" 
-        placeholder="Кратко опишите вашу ситуацию (название компании, сумма потерь)" 
-        rows="3"
-        required
-        class="form-textarea"
-      ></textarea>
-    </div>
-    
-    <div class="checkbox-group">
-      <label class="custom-checkbox">
-        <input type="checkbox" id="dataConsent" name="dataConsent" required>
-        <span class="checkmark"></span>
-        <span class="checkbox-text">
-          Я даю согласие на 
-          <a href="#privacy-policy" class="privacy-link">обработку персональных данных</a>
-        </span>
-      </label>
-    </div>
-    
-    <button type="submit" class="submit-btn">
-      <span class="btn-text">Получить бесплатную консультацию</span>
-      <span class="btn-icon">💬</span>
-    </button>
-    
-    <div id="formResponse" class="form-message" style="display: none;"></div>
-  </form>
-
-  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
-  <script>
-    const input = document.querySelector("#clientPhone");
-
-    const iti = window.intlTelInput(input, {
-      initialCountry: "ru",
-      preferredCountries: ["ru", "ua", "kz", "us"],
-      nationalMode: false,
-      separateDialCode: true,
-      autoHideDialCode: false,
-      formatOnDisplay: true,
-      utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js"
-    });
-
-    // Перемещаем dropdown внутрь контейнера .iti, если он случайно в body
-    setTimeout(() => {
-      const dropdown = document.querySelector(".iti__country-list");
-      const container = input.closest(".iti");
-      if (dropdown && container && !container.contains(dropdown)) {
-        container.appendChild(dropdown);
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .company-search-banner {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        border-radius: 20px;
+        padding: 24px 32px;
+        margin: 40px 0;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 15px 35px rgba(102, 126, 234, 0.3);
+        transition: all 0.3s ease;
       }
-    }, 100);
-  </script>
-</body>
+
+      .company-search-banner:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 20px 45px rgba(102, 126, 234, 0.4);
+      }
+
+      .banner-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 30px;
+        position: relative;
+        z-index: 2;
+      }
+
+      .banner-left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex: 1;
+      }
+
+      .banner-icon {
+        font-size: 42px;
+        animation: searchRotate 3s ease-in-out infinite;
+      }
+
+      @keyframes searchRotate {
+        0%,
+        100% {
+          transform: rotate(0deg) scale(1);
+        }
+        25% {
+          transform: rotate(-5deg) scale(1.1);
+        }
+        75% {
+          transform: rotate(5deg) scale(1.1);
+        }
+      }
+
+      .banner-text h3 {
+        font-size: 24px;
+        font-weight: 800;
+        color: white;
+        margin: 0 0 8px 0;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .banner-text p {
+        font-size: 16px;
+        color: rgba(255, 255, 255, 0.9);
+        margin: 0;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      .highlight {
+        color: #ffd700;
+        font-weight: 700;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .banner-right {
+        flex-shrink: 0;
+      }
+
+      .banner-cta-btn {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(10px);
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        color: white;
+        padding: 16px 32px;
+        border-radius: 50px;
+        font-size: 18px;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .banner-cta-btn::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(255, 255, 255, 0.2),
+          transparent
+        );
+        transition: left 0.6s ease;
+      }
+
+      .banner-cta-btn:hover::before {
+        left: 100%;
+      }
+
+      .banner-cta-btn:hover {
+        background: rgba(255, 255, 255, 0.25);
+        border-color: rgba(255, 255, 255, 0.5);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+      }
+
+      .banner-cta-btn:active {
+        transform: translateY(0);
+      }
+
+      .btn-arrow {
+        font-size: 20px;
+        transition: transform 0.3s ease;
+        font-weight: 900;
+      }
+
+      .banner-cta-btn:hover .btn-arrow {
+        transform: translateX(4px);
+      }
+
+      .banner-decoration {
+        position: absolute;
+        top: -50%;
+        right: -20%;
+        width: 200px;
+        height: 200px;
+        background: radial-gradient(
+          circle,
+          rgba(255, 255, 255, 0.1) 0%,
+          transparent 70%
+        );
+        border-radius: 50%;
+        pointer-events: none;
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px) rotate(0deg);
+        }
+        50% {
+          transform: translateY(-10px) rotate(180deg);
+        }
+      }
+
+      /* Адаптивность */
+      @media (max-width: 768px) {
+        .company-search-banner {
+          padding: 20px;
+          margin: 30px 0;
+        }
+
+        .banner-content {
+          flex-direction: column;
+          gap: 20px;
+          text-align: center;
+        }
+
+        .banner-left {
+          justify-content: center;
+          gap: 15px;
+        }
+
+        .banner-icon {
+          font-size: 36px;
+        }
+
+        .banner-text h3 {
+          font-size: 20px;
+        }
+
+        .banner-text p {
+          font-size: 14px;
+        }
+
+        .banner-cta-btn {
+          padding: 14px 28px;
+          font-size: 16px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .company-search-banner {
+          padding: 16px;
+          border-radius: 16px;
+        }
+
+        .banner-left {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .banner-text h3 {
+          font-size: 18px;
+        }
+
+        .banner-cta-btn {
+          width: 100%;
+          justify-content: center;
+          padding: 16px 24px;
+        }
+      }
+    </style>
+    <div class="company-search-banner">
+      <div class="banner-content">
+        <div class="banner-left">
+          <div class="banner-icon">🔍</div>
+          <div class="banner-text">
+            <h3>Не нашли нужную компанию?</h3>
+            <p>
+              Мы проверим любого брокера или биржу за 24 часа.
+              <span class="highlight">Бесплатно!</span>
+            </p>
+          </div>
+        </div>
+        <div class="banner-right">
+          <button class="banner-cta-btn" onclick="openCompanyRequestModal()">
+            <span class="btn-text">Заказать проверку</span>
+            <span class="btn-arrow">→</span>
+          </button>
+        </div>
+      </div>
+      <div class="banner-decoration"></div>
+    </div>
+    <script>
+      function openCompanyRequestModal() {
+        // Простой промпт для быстрого решения
+        const companyName = prompt("Введите название компании для проверки:");
+        if (companyName) {
+          const email = prompt("Ваш email для отправки результата:");
+          if (email && email.includes("@")) {
+            alert(
+              `Спасибо! Мы проверим "${companyName}" и отправим результат на ${email} в течение 24 часов.`
+            );
+
+            // Здесь можно отправить данные на сервер
+            console.log("Company check request:", { companyName, email });
+
+            // Аналитика
+            if (typeof gtag !== "undefined") {
+              gtag("event", "company_check_request", {
+                event_category: "Banner Click",
+                event_label: companyName,
+              });
+            }
+          } else if (email) {
+            alert("Пожалуйста, введите корректный email адрес");
+          }
+        }
+      }
+    </script>
+  </body>
 </html>
